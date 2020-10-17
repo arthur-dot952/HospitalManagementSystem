@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeAnalysis.Analyzers.2.9.8\build\Microsoft.CodeAnalysis.Analyzers.props" Condition="Exists('packages\Microsoft.CodeAnalysis.Analyzers.2.9.8\build\Microsoft.CodeAnalysis.Analyzers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E59F062F-691F-48F0-A627-8FC5FF427868}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hospital_Management_System_1</RootNamespace>
+    <AssemblyName>Hospital Management System 1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>doctor-14076-16x16.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.19\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add Appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Appointment.Designer.cs">
+      <DependentUpon>Add Appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add New Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add New Staff.Designer.cs">
+      <DependentUpon>Add New Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppointmentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppointmentDetails.Designer.cs">
+      <DependentUpon>AppointmentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments.cs" />
+    <Compile Include="Billing.cs" />
+    <Compile Include="Shalom Hospital Management System.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shalom Hospital Management System.Designer.cs">
+      <DependentUpon>Shalom Hospital Management System.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs" />
+    <Compile Include="StaffList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffList.Designer.cs">
+      <DependentUpon>StaffList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRemove Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRemove Staff.Designer.cs">
+      <DependentUpon>EditRemove Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRemove Mgonjwa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRemove Mgonjwa.Designer.cs">
+      <DependentUpon>EditRemove Mgonjwa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Mgonjwa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Mgonjwa.Designer.cs">
+      <DependentUpon>Add Mgonjwa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mgonjwa List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mgonjwa List.Designer.cs">
+      <DependentUpon>Mgonjwa List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nurse.Designer.cs">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Billing Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing Form.Designer.cs">
+      <DependentUpon>Billing Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Create Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create Account.Designer.cs">
+      <DependentUpon>Create Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB.cs" />
+    <Compile Include="Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor.Designer.cs">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sick.cs" />
+    <Compile Include="UpdateDelete Appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDelete Appointment.Designer.cs">
+      <DependentUpon>UpdateDelete Appointment.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add Appointment.resx">
+      <DependentUpon>Add Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add New Staff.resx">
+      <DependentUpon>Add New Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AppointmentDetails.resx">
+      <DependentUpon>AppointmentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shalom Hospital Management System.resx">
+      <DependentUpon>Shalom Hospital Management System.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffList.resx">
+      <DependentUpon>StaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRemove Staff.resx">
+      <DependentUpon>EditRemove Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRemove Mgonjwa.resx">
+      <DependentUpon>EditRemove Mgonjwa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Mgonjwa.resx">
+      <DependentUpon>Add Mgonjwa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mgonjwa List.resx">
+      <DependentUpon>Mgonjwa List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nurse.resx">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing Form.resx">
+      <DependentUpon>Billing Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create Account.resx">
+      <DependentUpon>Create Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor.resx">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UpdateDelete Appointment.resx">
+      <DependentUpon>UpdateDelete Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People-Patient-Male-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-clear-locationbar-ltr-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documents-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-dr-ruparelia-s-sushrusha-ayurved-multispeciality-hospital-5ac48f9fc03097.5142765515228312637872.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medical-Nurse-Female-Light-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\healthnor-htm5-template.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-web-interface-button-red-color-application-log-out-internet-design-exit-web-interface-button-red-color-application-log-out-112759695.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-web-interface-button-red-color-application-log-out-internet-design-exit-web-interface-button-red-color-application-log-out-1127596951.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\healthnor-htm5-template1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="doctor-14076-16x16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.Analyzers.2.9.8\build\Microsoft.CodeAnalysis.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.Analyzers.2.9.8\build\Microsoft.CodeAnalysis.Analyzers.props'))" />
+  </Target>
+</Project>
